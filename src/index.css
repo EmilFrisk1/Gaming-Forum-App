@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Vujahday+Script&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  color: #333
+}
+
+:root {
+  --primary-color: #3f3ff3;
+}
+
+/* SVG - filters */
+
+.filter-blue {
+  filter: invert(20%) sepia(77%) saturate(3554%) hue-rotate(239deg) brightness(94%) contrast(102%);
+}
+
+.filter-gray {
+  filter: invert(52%) sepia(0%) saturate(671%) hue-rotate(136deg) brightness(97%) contrast(85%);
+}
+
+.filter-black {
+  filter: none;
+}
+
+/*               */
+
+body {
+  margin: 0;
+  position: relative;
+}
+
+.gray {
+  color: hsl(0, 0%, 45%);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.validation-error {
+  color: crimson;
+  position: static;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: lightyellow;
+}
+
+.loading {
+  font-size: 48px;
+  min-height: 100vh;
+  display: Flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: .5rem .75rem;
+  text-align: center;
+  margin: .75rem;
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: hsl(240, 88%, 55%)
+}
+
+.btn-cancel {
+  background-color: hsl(0, 0%, 50%);
+}
+
+.btn-cancel:hover {
+  background-color: hsl(0, 0%, 47%);
+}
+
+.sign-out-btn,
+.btn-delete {
+  background: hsl(348, 83%, 47%);
+}
+
+.btn-delete:disabled {
+  background: gray;
+}
+
+.btn-delete:disabled:hover {
+  background: gray;
+}
+
+.sign-out-btn:hover,
+.btn-delete:hover {
+  background: hsl(348, 83%, 42%);
+} 
+
+.main-nav .brand-name-and-logo {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav .brand-name-and-logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-nav .brand-name {
+  margin: 1rem;
+  font-size: 48px;
+  font-weight: 600; 
+  font-family: 'Vujahday Script', cursive;
+}
+
+.auth-form,
+.new-blog-form {
+  background: hsl(0, 0%, 97%);
+  margin: 0 auto;
+  border-radius: 20px;
+  max-width: 400px;
+  padding: 3rem;
+}
+
+.new-blog-form {
+  max-width: 600px;
+}
+
+.auth-form h3,
+.new-blog-form h3 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.auth-form .input-group,
+.new-blog-form .input-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.auth-form .input-group .visibility-btn {
+  background: none;
+  border: none;
+  position: absolute;
+  height: 24px;
+  top: 21%;
+  left: 85%;
+  cursor: pointer;
+}
+
+.auth-form .input-group input,
+.new-blog-form .input-group input,
+.new-blog-form .input-group textarea {
+  border: none;
+  padding: .5rem;
+  border-radius: 5px;
+}
+
+.new-blog-form .input-group textarea {
+  resize: vertical;
+  font-size: inherit;
+}
+
+.new-blog-form .input-group input {
+  margin-bottom: 1rem;
+}
+
+.auth-form .input-group label,
+.new-blog-form .input-group label {
+  padding-bottom: 1rem;
+}
+
+.auth-form .input-group button,
+.new-blog-form .input-group button {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.auth-link a {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  color: inherit;
+}
+
+.post-list {
+  padding: 0;
+}
+
+.post-list a {
+  text-decoration: none;
+  color: inherit
+}
+
+.post {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #333;
+  margin: 1rem 0;
+  border-left: 6px solid var(--primary-color);
+  padding-left: 12px;
+}
+
+.post:hover {
+  background: hsl(0, 0%, 95%);
+  cursor: pointer
+}
+
+.like-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+}
+
+.like-count {
+  margin: .75rem;
+  font-size: 1.15rem;
+  color: blue;
+}
+
+.post .description {
+  padding: 1rem 1rem 1rem 0;
+}
+
+.post .post-title {
+  text-decoration: underline;
+}
+
+.post .date-and-creator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post-wrapper .date-and-creator {
+  background: #333;
+  border-radius: 5px;
+}
+
+.post .post-time {
+  padding: 0 1rem 0 0;
+}
+
+.post .post-creator,
+.post-wrapper .post-time {
+  padding: 1rem 1rem 0 0;
+  text-align: right;
+}
+
+.post-wrapper {
+  max-width: 650px;
+  background: hsl(0, 0%, 96%);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.post-wrapper .post-time {
+  padding: 0;
+  padding-right: 1rem;  
+}
+
+.post-wrapper .blog-title {
+  border-bottom: 1px solid #333;
+  padding-bottom: .5rem;
+}
+
+.post-wrapper .date-and-creator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.post-wrapper .post-creator,
+.post-wrapper .post-time {
+  color: white;
+}
+
+.blog-filter {
+  padding: .5rem .75rem;
+  background: #333;
+  color: white;
+  border: none;
+  font-size: inherit;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.confirmation {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px; 
+  left: 0px;
+  height: 100vh;
+  background: #333;
+  opacity: .95;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation.hidden {
+  display: none;
+}
+
+.confirmation-card {
+  background: black;
+  padding: 1.5rem;
+  border-radius: 5px;
+  opacity: 0.6
+}
+
+.action-buttons .like-button .like-button-tooltip {
+  position: absolute;
+  width: max-content;
+  top: -100%;
+  color: white;
+  background: #333;
+  padding: .5rem .75rem;
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+
+ .like-button-tooltip.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 550px) {
+  .main-nav .brand-name {
+    font-size: 2rem;
+  }
+
+  .main-nav .brand-logo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .main-nav {
+    flex-direction: column;
+  } 
+
+  .main-nav .brand-name {
+    margin-bottom: 0;
+  }
+
+  .post-wrapper .date-and-creator {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+  }
+}
