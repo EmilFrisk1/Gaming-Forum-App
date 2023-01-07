@@ -2,7 +2,7 @@
 ---
 
 ## About the project
-The project is hosted on netlify: _<a href="https://roaring-dragon-9ba8a1.netlify.app/" target="_blank">Website</a>_
+The project is hosted on netlify: _<a href="https://eloquent-cactus-d45bd4.netlify.app/" target="_blank">Website</a>_
 * Backend is hosted on Render and frontend is hosted on Netlify
 * Uses MongoDB as a database
 * Has custom build authentication system which uses JWT
